@@ -22,7 +22,7 @@ git checkout master （switch to  inmaster）
 git checkout -b _branchName （create and switch to branch）
 git branch（view all branches）
 
-**Note：**MAKE SURE to switch to the branch before making changes
+**Note** MAKE SURE to switch to the branch before making changes
 
 git merge _branchName（merge the current branch and the specified one）
 git status
