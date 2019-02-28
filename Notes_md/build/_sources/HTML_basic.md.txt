@@ -1,0 +1,9 @@
+## HTML 基础
+
+Html，超文本标记语言，是负责描述文档语义的语言，除了语义，什么都没有
+
+Html 的网络术语：
+
+- xhtml 符合 xml 语法标准的 html
+- dhtml 动态的html。 javascript + css + html
+

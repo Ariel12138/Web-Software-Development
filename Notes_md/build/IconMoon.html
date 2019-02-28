@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>使用 IconMoon 生成字体图标 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="HTML 基础" href="HTML_basic.html" />
+    <link rel="prev" title="VScode 使用笔记" href="VScode.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">前端工具</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">使用 IconMoon 生成字体图标</a></li>
+</ul>
+<p class="caption"><span class="caption-text">walwawala</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HTML_basic.html">HTML 基础</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>使用 IconMoon 生成字体图标</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/IconMoon.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iconmoon">
+<span id="iconmoon"></span><h1>使用 IconMoon 生成字体图标<a class="headerlink" href="#iconmoon" title="永久链接至标题">¶</a></h1>
+<p><strong>icon font优点：</strong></p>
+<ul class="simple">
+<li>「分辨率无关」特性</li>
+<li>文件小 将图片打包进一套字体内，http request 减少</li>
+<li>支持CSS样式 可以定义大小、颜色、阴影、hover状态、透明度等</li>
+<li>兼容性好</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul class="simple">
+<li>样式单一，无法针对不同分辨率调整细节</li>
+<li>少量移动设备可能和icon fonts的字符编码冲突，导致icon显示不正常</li>
+</ul>
+<p><strong>使用笔记：</strong></p>
+<p><a class="reference external" href="https://icomoon.io/app/#/select">https://icomoon.io/app/#/select</a>.</p>
+<p>选择自己想要的图标，然后generate 之后下载包</p>
+<p>将fonts文件夹和style.css 复制到项目文件夹下</p>
+<p>通过 <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=&quot;stylesheet&quot;</span> <span class="pre">href=&quot;style.css&quot;&gt;</span></code></p>
+<p>将CSS链接到html文件中</p>
+<p>使用时class选择相应icon</p>
+<p>也可以导入自己的图片</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="HTML_basic.html" class="btn btn-neutral float-right" title="HTML 基础" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="VScode.html" class="btn btn-neutral" title="VScode 使用笔记" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'zh',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
