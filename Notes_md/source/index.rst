@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Notes's documentation!
+互联网软件开发与实践学习笔记
 =================================
 
 .. toctree::
