@@ -10,15 +10,30 @@ Welcome to Notes's documentation!
    :maxdepth: 2
    :caption: 前端工具
 
-   Git.md
-   VScode.md
-   IconMoon.md
+   tools/Git.md
+   tools/VScode.md
+   tools/IconMoon.md
 
 .. toctree::
    :maxdepth: 2
-   :caption: walwawala
+   :caption: HTML
    
-   HTML_basic.md
+   html/HTML_basic.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 课堂笔记
+
+   class/Class_02.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 实践分析
+
+   hw/HW_login.md
+   
+
 
 
 Indices and tables
