@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>配置云服务器 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="实践作业：登录页面" href="HW_login.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">前端工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实践分析</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="HW_login.html">实践作业：登录页面</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">配置云服务器</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>配置云服务器</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hw/Server.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="">
+<span id="id1"></span><h1>配置云服务器<a class="headerlink" href="#" title="永久链接至标题">¶</a></h1>
+<p>遇到的问题：</p>
+<ul class="simple">
+<li>购买服务器后不知道如何配置</li>
+<li>上传文件 显示permission denied</li>
+<li>最初选择的服务器配置的ubuntu系统，然后更改配置到CentOS</li>
+<li>再次使用终端登陆服务器，出现 Remote host identification has changed 警告，无法登陆重装系统的服务器</li>
+</ul>
+<p>问题解决：</p>
+<ul class="simple">
+<li>查看产品文档--未能找到解决方法</li>
+<li>搜索“linux如何配置服务器”，查看各种学习博客</li>
+<li>搜索“Remote host identification has changed”</li>
+</ul>
+<p>服务器配置操作：</p>
+<ul class="simple">
+<li>安装 apache 服务器</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">httpd</span> 
+</pre></div>
+</div>
+<ul class="simple">
+<li>启动 apache 服务器并设置开机自动启动</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">start</span> <span class="n">httpd</span>
+<span class="n">systemctl</span> <span class="n">enable</span> <span class="n">httpd</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>配置完成</li>
+</ul>
+<p>文件上传到服务器的操作：</p>
+<ul class="simple">
+<li>使用 scp 进行上传</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="n">source</span> <span class="n">username</span><span class="nd">@xx</span><span class="o">.</span><span class="n">xx</span><span class="o">.</span><span class="n">xx</span><span class="o">.</span><span class="n">xxx</span><span class="p">:[</span><span class="n">filepath</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>使用sftp上传</li>
+<li>使用ftp客户端进行上传</li>
+</ul>
+<p>文件存放地址及外部访问链接：</p>
+<ul class="simple">
+<li>登陆到服务器时 位置为~ 用<code class="docutils literal notranslate"><span class="pre">ls</span></code>命令查看文件，结果为无</li>
+<li>使用命令<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/</span></code>到根目录</li>
+<li>将文件存放在 /var/www/html 下</li>
+<li>域名xx.xx.xx.xxx登陆显示位于/var/www/html路径</li>
+<li>如果文件 index.html 的位置是 /var/www/html 则它的访问地址为 xx.xx.xx.xxx/index.html</li>
+<li>如果文件路径为 /var/www/html/1/2/3/index.html 则访问地址为 xx.xx.xx.xxx/1/2/3/index.html</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="HW_login.html" class="btn btn-neutral" title="实践作业：登录页面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

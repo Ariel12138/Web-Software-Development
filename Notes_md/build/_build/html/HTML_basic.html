@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTML 基础 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="实践作业：登录页面" href="../hw/HW_login.html" />
+    <link rel="prev" title="使用 IconMoon 生成字体图标" href="../tools/IconMoon.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">前端工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">HTML 基础</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#html">Html结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">排版标签：</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">图片标签</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">实践分析</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">实践作业：登录页面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/Server.html">配置云服务器</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>HTML 基础</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/html/HTML_basic.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="html">
+<span id="html"></span><h1>HTML 基础<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h1>
+<p>Html，超文本标记语言，是负责描述文档语义的语言，除了语义，什么都没有</p>
+<p>Html 的网络术语：</p>
+<ul class="simple">
+<li>xhtml 符合 xml 语法标准的 html</li>
+<li>dhtml 动态的html。 javascript + css + html</li>
+</ul>
+<p>Html 颜色：</p>
+<ul class="simple">
+<li>纯单词表示：red, green, blue, orange, gray</li>
+<li>10进制表示：rgb(255,0,0)</li>
+<li>16进制表示：#FF0000 等</li>
+</ul>
+<div class="section" id="html">
+<span id="id1"></span><h2>Html结构<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p class="first">文档声明头：<code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Generator&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;EditPlus®&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+ <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">meta 标签提供有关页面的基本信息 在head标签内 包括一些页面配置</p>
+<ul class="simple">
+<li>charset 字符集 一般使用 UTF-8</li>
+<li>Keywords 定义关键词，提高搜索引擎命中率</li>
+<li>Description 设置页面描述，能够在搜索结果中显示这些语句，SEO（搜索引擎优化）</li>
+</ul>
+</li>
+<li><p class="first">body标签属性：</p>
+</li>
+<li><p class="first">bgcolor 整个网页的背景颜色</p>
+</li>
+<li><p class="first">background 整个网页的背景图片</p>
+</li>
+<li><p class="first">text 设置网页中文本颜色</p>
+</li>
+<li><p class="first">leftmargin/ topmargin/ rightmargin/ bottommargin 设置边距</p>
+</li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id2"></span><h2>排版标签：<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>注释  <!-- 注释  --></li>
+<li>align=&quot;&quot;  对齐方式，包括left/ center/ right</li>
+<li>文本级标签 p, span, a, b, i, u, em 标签中只能放文字、图片和表单元素</li>
+<li>容器级标签 div, h, li, dt, dd 可以放任何东西</li>
+<li>块级标签 div 和 span<ul>
+<li>div 和 span 的唯一区别：span 不换行， div 换行</li>
+<li>span 表示小区域小跨度的标签。但是一个文本级的标签 不能放p, h, ul, dl, ol, div</li>
+<li>span 里面放置小元素，div里面放置大东西</li>
+</ul>
+</li>
+<li>一些小标记：<ul>
+<li>u 下划线标记</li>
+<li>s 或 del 中划线标记（删除线）</li>
+<li>b 或 strong 粗体</li>
+<li>上标 sup 下标 sub</li>
+</ul>
+</li>
+</ul>
+<p>超链接：</p>
+<ul class="simple">
+<li>外部链接</li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;02页面.html&quot;</span><span class="p">&gt;</span>点击进入另外一个文件<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>锚链接</li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;a.html#name1&quot;</span><span class="p">&gt;</span>回到顶部<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>超链接属性<ul>
+<li><code class="docutils literal notranslate"><span class="pre">href</span></code>：目标URL</li>
+<li><code class="docutils literal notranslate"><span class="pre">title</span></code>：悬停文本。</li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>：主要用于设置一个锚点的名称。</li>
+<li><code class="docutils literal notranslate"><span class="pre">target</span></code>：告诉浏览器用什么方式来打开目标页面。<code class="docutils literal notranslate"><span class="pre">target</span></code>属性有以下几个值：<ul>
+<li><code class="docutils literal notranslate"><span class="pre">_self</span></code>：在同一个网页中显示（默认值）</li>
+<li><code class="docutils literal notranslate"><span class="pre">_blank</span></code>：<strong>在新的窗口中打开</strong>。</li>
+<li><code class="docutils literal notranslate"><span class="pre">_parent</span></code>：在父窗口中显示</li>
+<li><code class="docutils literal notranslate"><span class="pre">_top</span></code>：在顶级窗口中显示</li>
+</ul>
+</li>
+<li>使用target= ‘’_blank‘’ 表示在新的窗口中打开链接，否则就是在当前页面跳转</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;1.html&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;悬停文本&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>链接的内容<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h2>图片标签<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<div class="section" id="">
+<span id="id4"></span><h3><a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../hw/HW_login.html" class="btn btn-neutral float-right" title="实践作业：登录页面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tools/IconMoon.html" class="btn btn-neutral" title="使用 IconMoon 生成字体图标" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
