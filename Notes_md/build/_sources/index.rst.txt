@@ -8,7 +8,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 前端工具
+   :caption: 工具
 
    tools/Git.md
    tools/VScode.md
@@ -16,14 +16,15 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: HTML
+   :caption: HTML & CSS
    
    html/HTML_basic.md
+   html/CSS_basic.md
 
 
 .. toctree::
    :maxdepth: 1
-   :caption: 实践分析
+   :caption: 实践及分析
 
    hw/HW_login.md
    hw/Server.md
