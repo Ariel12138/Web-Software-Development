@@ -11,7 +11,7 @@
   - body 设置宽度 80%
   - 文本内容首行缩进
   - 图片 float：right
-  - footer设置字体，颜色等
+  - footer设置字体，颜色
 
 作业代码：
 ```html

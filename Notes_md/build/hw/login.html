@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>作业2：制作登陆页面 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML &amp; CSS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实践及分析</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HW_login.html">实践作业：登录页面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Server.html">配置云服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_intro.html">作业1: 人物介绍</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>作业2：制作登陆页面</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hw/login.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="">
+<span id="id1"></span><h1>作业2：制作登陆页面<a class="headerlink" href="#" title="永久链接至标题">¶</a></h1>
+<div class="section" id="">
+<span id="id2"></span><h2>作业截图<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h2>步骤<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>下载psd文件通过图层显示关闭将所需要的素材分离出来</li>
+<li>按照背景-logo-登陆横幅-登录框-登录框细节的顺序由大到小进行设计</li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id4"></span><h2>问题与解决<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>添加“使用帮助”时字体为蓝色，是在什么地方设置的？<ul>
+<li>……是link的预设颜色</li>
+</ul>
+</li>
+<li>form 标签的属性 method 中 post 和 get 有何区别？</li>
+<li>form 标签下 fieldset 和 legend 标签的功能？<ul>
+<li>解决于CSS学习</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="html">
+<span id="html"></span><h2>HTML代码<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;CSS/style.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>教学课件管理系统<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login_hd&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="c">&lt;!---为什么clear--&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login_banner&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login_main&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login_help&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>使用帮助<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">#</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login_form&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>登录表单<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;username&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot; 学院邮箱&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot; 密码&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;login_btn&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;guest&quot;</span><span class="p">&gt;</span>用户名或密码错误！<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;forget&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>密码找回？<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first&quot;</span><span class="p">&gt;</span>首次登陆，请使用“密码找回”功能，初始化您的密码！<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="css">
+<span id="css"></span><h2>CSS 代码<a class="headerlink" href="#css" title="永久链接至标题">¶</a></h2>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span>/*---------global style-----------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none
+}
+img {
+    vertical-align: top;
+    border: none
+}
+legend {
+    display: none
+}
+fieldset {
+    border: none
+}
+a {
+    text-decoration: none
+}
+a:hover,
+a:active {
+    text-decoration: none
+}
+.clear {
+    clear：both;
+}
+
+/*-----------login---------------*/
+
+body {
+    font: 12px;
+    font-family: Microsoft YaHei;
+    position: relative;
+    margin: 0;
+    color: #000000;
+}
+#container {
+    width: 960px;
+    box-shadow: 0 0 15px #999999;
+    margin: 0 auto;
+    margin-top: 1%;
+    overflow-x: hidden;
+    position: relative;
+}
+.login {
+    background: #0c7fc2 url(/img/bg.png) no-repeat center center;
+    height: 600px;
+}
+.login_hd {
+    background: url(/img/LOGO.png) no-repeat;
+    float: left;
+    margin: 20px 20px 0;
+    width: 455px;
+    height: 80px;
+}
+.login_banner {
+    background: url(/img/login_banner.png) no-repeat;
+    float: left;
+    margin: 200px 80px 0;
+    width: 310px;
+    height: 53px;
+}
+.login_main {
+    background: url(/img/login_bg.png) no-repeat;
+    margin-top: 80px;
+    margin-right: 47px;
+    float: right;
+    width: 390px;
+    height: 240px;
+    position: relative;
+}
+.login_help {
+    float: right;
+    margin: 11px 15px 0 0;
+    font-size: 14px;
+}
+.login_form {
+    width: 272px;
+    height: 170px;
+    padding: 27px 28px 0 26px;
+    color: #000101;
+    position: relative;
+}
+.username {
+    height: 57px;
+    margin: 52px 90px 13px;
+}
+.password {
+    height: 57px;
+    margin: -25px 90px 13px;
+}
+.username input,
+.password input {
+    width: 176px;
+    height: 32px;
+    border: 0;
+    color: #999;
+    font-size: 14px;
+    line-height: 32px;
+}
+.username input {
+    position: absolute;
+    top: 89px;
+    left: 155px;
+}
+.password input {
+    position: absolute;
+    top: 135px;
+    left: 155px;
+}
+.login_btn {
+    text-align: center;
+    height: 40px;
+    margin: 0 0 0 4px;
+    position: absolute;
+    top: 173px;
+    left: 150px;
+}
+.login_btn input {
+    background: url(/img/btn_bg.png) no-repeat;
+    border: 0;
+    width: 67px;
+    height: 28px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.guest {
+    float: left;
+    margin: 0px 20px 0;
+    height: 30px;
+    font-size: 14px;
+    position: absolute;
+    top: 205px;
+    left: 0px;
+    width: 350px;
+    text-align: center;
+    color: #f00;
+}
+.guest a {
+    color: #ff0000
+}
+.forget {
+    float: right;
+    margin: 0px 20px 0;
+    height: 30px;
+    font-size: 14px;
+    position: absolute;
+    top: 175px;
+    left: 250px;
+}
+.forget a {
+    color: #ff0000;
+}
+.first {
+    font-size: 14px;
+    float: right;
+    margin: 10px 0px 0;
+    width: 370px;
+    height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 240px;
+    left: 20px;
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
