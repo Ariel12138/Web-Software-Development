@@ -27,9 +27,10 @@
    :maxdepth: 1
    :caption: 实践及分析
 
-   hw/HW_login.md
    hw/Server.md
+   hw/HW_login.md
    hw/HW_intro.md
+   hw/login.md
    
 
 
