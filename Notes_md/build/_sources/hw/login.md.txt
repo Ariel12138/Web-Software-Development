@@ -53,7 +53,7 @@
 </html>
 ```
 #### CSS 代码
-```CSS
+```css
 /*---------global style-----------*/
 * {
     margin: 0;
