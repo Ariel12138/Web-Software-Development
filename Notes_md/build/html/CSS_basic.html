@@ -92,9 +92,11 @@
 </ul>
 <p class="caption"><span class="caption-text">实践及分析</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">实践作业：登录页面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hw/Server.html">配置云服务器</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro.html">作业1: 人物介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro.html">作业1 人物介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro_ad.html">作业2.1 人物介绍+CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/login.html">作业2.2 制作登陆页面--给定psd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
 </ul>
 
             
@@ -161,6 +163,67 @@
             
   <div class="section" id="css">
 <span id="css"></span><h1>CSS 基础<a class="headerlink" href="#css" title="永久链接至标题">¶</a></h1>
+<p><strong>Id 和 Class 选择器</strong></p>
+<ul class="simple">
+<li>id 选择器为标有特定 id 的 HTML 元素指定特定样式</li>
+<li>CSS 中 id 选择器以“#”来定义</li>
+<li>id 属性只能在每个 HTML 中出现一次</li>
+<li>Class 选择器用于描述一组元素的样式</li>
+<li>Class 可以在多个元素中使用，类选择器用“.”表示</li>
+</ul>
+<p><strong>Background</strong></p>
+<ul class="simple">
+<li>CSS 属性定义背景效果，有color, image, repeat, attachment,postion</li>
+<li>repeat 默认情况下背景图像平铺重复显示，可以设置在水平或垂直方向平铺   <code class="docutils literal notranslate"><span class="pre">background-repeat:repeat-x;</span></code></li>
+<li>position 可以使用关键字，如top/bottom/left/center，关键字使用不超过两个；也可以使用长度值和百分值</li>
+<li>背景的简写 <code class="docutils literal notranslate"><span class="pre">body</span> <span class="pre">{background:#ffffff</span> <span class="pre">url('img_tree.png')</span> <span class="pre">no-repeat</span> <span class="pre">right</span> <span class="pre">top;}</span></code><ul>
+<li>顺序为 color, image, repeat, attachment,postion 不需要全部使用</li>
+</ul>
+</li>
+</ul>
+<p><strong>Text</strong></p>
+<ul class="simple">
+<li>对齐 text-align: center/right/left/justify</li>
+<li>装饰 text-decoration 用来设置或删除文本的装饰，主要是用来删除链接的下划线</li>
+<li>转换 text-transfom: uppercase/lowercase/capitalize</li>
+<li>缩进 text-indent</li>
+<li>间隔 word-spacing 改变字/单词之间的间隔</li>
+</ul>
+<p><strong>Link</strong></p>
+<ul class="simple">
+<li>a:link - 正常，未访问过的链接</li>
+<li>a:visited - 用户已访问过的链接</li>
+<li>a:hover - 当用户鼠标放在链接上时</li>
+<li>a:active - 链接被点击的那一刻</li>
+</ul>
+<p><strong>列表</strong></p>
+<p>分为无序列表<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>和有序列表<code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code>list-style-type 的设置：</p>
+<ul class="simple">
+<li>none：不使用项目符号</li>
+<li>disc：实心圆</li>
+<li>circle：空心圆</li>
+<li>square：实心方块</li>
+<li>demical：阿拉伯数字</li>
+<li>lower-alpha：小写英文字母</li>
+<li>upper-alpha：大写英文字母</li>
+<li>lower-roman：小写罗马数字</li>
+<li>upper-roman：大写罗马数字</li>
+</ul>
+<p>使用图片作为列表项：</p>
+<ul class="simple">
+<li>在<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>下设置 <code class="docutils literal notranslate"><span class="pre">list-style-image</span></code></li>
+<li>在<code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>下设置<code class="docutils literal notranslate"><span class="pre">background-image</span></code>，position设置位置，padding将文字放在列表中</li>
+</ul>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">sqpurple.gif</span><span class="p">);</span>
+  <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
+  <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> 
+  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span> 
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">list-style</span></code>缩写属性值顺序：list-style-type， list-style-position， list-style-image</p>
+<p><strong>Table</strong>表格元素：<code class="docutils literal notranslate"><span class="pre">&lt;table&gt;,&lt;th&gt;,&lt;td&gt;</span></code>表格宽度设定： <code class="docutils literal notranslate"><span class="pre">table{</span> <span class="pre">width:</span> <span class="pre">100%;</span> <span class="pre">}</span></code>表格高度设定： <code class="docutils literal notranslate"><span class="pre">th{</span> <span class="pre">height:</span> <span class="pre">50px;</span> <span class="pre">}</span></code>表格文字水平对齐： <code class="docutils literal notranslate"><span class="pre">td{</span> <span class="pre">text-align:right;</span> <span class="pre">}</span></code>垂直对齐： <code class="docutils literal notranslate"><span class="pre">td{</span> <span class="pre">height:</span> <span class="pre">50px;</span> <span class="pre">vertical-align:bottom}</span></code>边框颜色： <code class="docutils literal notranslate"><span class="pre">table,</span> <span class="pre">td,</span> <span class="pre">th{</span> <span class="pre">border:</span> <span class="pre">1px</span> <span class="pre">solid</span> <span class="pre">green;</span> <span class="pre">}</span></code>文本和背景颜色： <code class="docutils literal notranslate"><span class="pre">th{</span> <span class="pre">background-color:</span> <span class="pre">green;</span> <span class="pre">color:</span> <span class="pre">white;</span> <span class="pre">}</span></code></p>
 </div>
 
 
