@@ -13,6 +13,8 @@
    tools/Git.md
    tools/VScode.md
    tools/IconMoon.md
+   tools/Agile_dev.md
+   tools/Django.md
 
 .. toctree::
    :maxdepth: 1
@@ -32,6 +34,7 @@
    hw/HW_intro_ad.md
    hw/login.md
    hw/HW_login.md
+   hw/HW4_encrypt.md
    
    
    
