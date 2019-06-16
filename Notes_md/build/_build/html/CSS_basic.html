@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CSS 基础 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="CSS 盒子/浮动/定位" href="CSS_box_position.html" />
+    <link rel="prev" title="HTML 基础" href="HTML_basic.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Agile_dev.html">敏捷需求管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Django.html">Django</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML &amp; CSS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="HTML_basic.html">HTML 基础</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CSS 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实践及分析</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hw/Server.html">配置云服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro.html">作业1 人物介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro_ad.html">作业2.1 人物介绍+CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/login.html">作业2.2 制作登陆页面--给定psd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW4_encrypt.html">作业4.1 数据加密</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>CSS 基础</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/html/CSS_basic.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="css">
+<span id="css"></span><h1>CSS 基础<a class="headerlink" href="#css" title="永久链接至标题">¶</a></h1>
+<p><strong>Id 和 Class 选择器</strong></p>
+<ul class="simple">
+<li>id 选择器为标有特定 id 的 HTML 元素指定特定样式</li>
+<li>CSS 中 id 选择器以“#”来定义</li>
+<li>id 属性只能在每个 HTML 中出现一次</li>
+<li>Class 选择器用于描述一组元素的样式</li>
+<li>Class 可以在多个元素中使用，类选择器用“.”表示</li>
+</ul>
+<p><strong>Background</strong></p>
+<ul class="simple">
+<li>CSS 属性定义背景效果，有color, image, repeat, attachment,postion</li>
+<li>repeat 默认情况下背景图像平铺重复显示，可以设置在水平或垂直方向平铺   <code class="docutils literal notranslate"><span class="pre">background-repeat:repeat-x;</span></code></li>
+<li>position 可以使用关键字，如top/bottom/left/center，关键字使用不超过两个；也可以使用长度值和百分值</li>
+<li>背景的简写 <code class="docutils literal notranslate"><span class="pre">body</span> <span class="pre">{background:#ffffff</span> <span class="pre">url('img_tree.png')</span> <span class="pre">no-repeat</span> <span class="pre">right</span> <span class="pre">top;}</span></code><ul>
+<li>顺序为 color, image, repeat, attachment,postion 不需要全部使用</li>
+</ul>
+</li>
+</ul>
+<p><strong>Text</strong></p>
+<ul class="simple">
+<li>对齐 text-align: center/right/left/justify</li>
+<li>装饰 text-decoration 用来设置或删除文本的装饰，主要是用来删除链接的下划线</li>
+<li>转换 text-transfom: uppercase/lowercase/capitalize</li>
+<li>缩进 text-indent</li>
+<li>间隔 word-spacing 改变字/单词之间的间隔</li>
+</ul>
+<p><strong>Link</strong></p>
+<ul class="simple">
+<li>a:link - 正常，未访问过的链接</li>
+<li>a:visited - 用户已访问过的链接</li>
+<li>a:hover - 当用户鼠标放在链接上时</li>
+<li>a:active - 链接被点击的那一刻</li>
+</ul>
+<p><strong>列表</strong></p>
+<p>分为无序列表<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>和有序列表<code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code>list-style-type 的设置：</p>
+<ul class="simple">
+<li>none：不使用项目符号</li>
+<li>disc：实心圆</li>
+<li>circle：空心圆</li>
+<li>square：实心方块</li>
+<li>demical：阿拉伯数字</li>
+<li>lower-alpha：小写英文字母</li>
+<li>upper-alpha：大写英文字母</li>
+<li>lower-roman：小写罗马数字</li>
+<li>upper-roman：大写罗马数字</li>
+</ul>
+<p>使用图片作为列表项：</p>
+<ul class="simple">
+<li>在<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>下设置 <code class="docutils literal notranslate"><span class="pre">list-style-image</span></code></li>
+<li>在<code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>下设置<code class="docutils literal notranslate"><span class="pre">background-image</span></code>，position设置位置，padding将文字放在列表中</li>
+</ul>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">sqpurple.gif</span><span class="p">);</span>
+  <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
+  <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> 
+  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span> 
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">list-style</span></code>缩写属性值顺序：list-style-type， list-style-position， list-style-image</p>
+<p><strong>Table</strong>表格元素：<code class="docutils literal notranslate"><span class="pre">&lt;table&gt;,&lt;th&gt;,&lt;td&gt;</span></code>表格宽度设定： <code class="docutils literal notranslate"><span class="pre">table{</span> <span class="pre">width:</span> <span class="pre">100%;</span> <span class="pre">}</span></code>表格高度设定： <code class="docutils literal notranslate"><span class="pre">th{</span> <span class="pre">height:</span> <span class="pre">50px;</span> <span class="pre">}</span></code>表格文字水平对齐： <code class="docutils literal notranslate"><span class="pre">td{</span> <span class="pre">text-align:right;</span> <span class="pre">}</span></code>垂直对齐： <code class="docutils literal notranslate"><span class="pre">td{</span> <span class="pre">height:</span> <span class="pre">50px;</span> <span class="pre">vertical-align:bottom}</span></code>边框颜色： <code class="docutils literal notranslate"><span class="pre">table,</span> <span class="pre">td,</span> <span class="pre">th{</span> <span class="pre">border:</span> <span class="pre">1px</span> <span class="pre">solid</span> <span class="pre">green;</span> <span class="pre">}</span></code>文本和背景颜色： <code class="docutils literal notranslate"><span class="pre">th{</span> <span class="pre">background-color:</span> <span class="pre">green;</span> <span class="pre">color:</span> <span class="pre">white;</span> <span class="pre">}</span></code></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CSS_box_position.html" class="btn btn-neutral float-right" title="CSS 盒子/浮动/定位" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HTML_basic.html" class="btn btn-neutral" title="HTML 基础" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -78,20 +78,28 @@
               
             
             
-              <p class="caption"><span class="caption-text">前端工具</span></p>
+              <p class="caption"><span class="caption-text">工具</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Git &amp; Github 使用</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VScode.html">VScode 使用笔记</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agile_dev.html">敏捷需求管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
 </ul>
-<p class="caption"><span class="caption-text">HTML</span></p>
+<p class="caption"><span class="caption-text">HTML &amp; CSS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
 </ul>
-<p class="caption"><span class="caption-text">实践分析</span></p>
+<p class="caption"><span class="caption-text">实践及分析</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">实践作业：登录页面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hw/Server.html">配置云服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro.html">作业1 人物介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro_ad.html">作业2.1 人物介绍+CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/login.html">作业2.2 制作登陆页面--给定psd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW4_encrypt.html">作业4.1 数据加密</a></li>
 </ul>
 
             
@@ -159,37 +167,39 @@
   <div class="section" id="git-github">
 <span id="git-github"></span><h1>Git &amp; Github 使用<a class="headerlink" href="#git-github" title="永久链接至标题">¶</a></h1>
 <ul class="simple">
-<li>mkdir 新建文件</li>
+<li>mkdir 新建文件夹</li>
 <li>git init 初始化</li>
+<li>git status 查看当前文件状态</li>
+<li>git add （git add . to add all）（to stage files）把工作区的修改添加到暂存区</li>
 <li>git status</li>
-<li>git add （git add . to add all）（to stage files）</li>
-<li>git status</li>
-<li>git commit</li>
+<li>git commit 把修改提交到本地仓库</li>
 <li>git commit -m 进行commit时附加一条说明</li>
-<li>git commit -a -m 全部commit</li>
-<li>git diff（if unstaged）</li>
+<li>git commit -a -m 全部commit 且添加一条说明</li>
+<li>git diff（if unstaged）工作区与暂存区进行比较</li>
 </ul>
 <p><strong>Working with Branches：</strong></p>
 <ul class="simple">
-<li>git branch _branchName （create branch）</li>
-<li>git status</li>
-<li>git checkout _branchName （switch to branch）</li>
-<li>git status</li>
+<li>git branch _branchName （create branch）新建分支</li>
+<li>git checkout _branchName （switch to branch）切换分支</li>
 <li>git checkout master （switch to  inmaster）</li>
-<li>git checkout -b _branchName （create and switch to branch）</li>
-<li>git branch（view all branches）</li>
+<li>git checkout -b _branchName （create and switch to branch）新建并切换到分支</li>
+<li>git branch（view all branches）查看当前本地的分支，且当前分支会用“*”标记</li>
+<li>git branch -r 查看远程仓库分支列表</li>
+<li>git branch -d _branchName 删除分支</li>
+<li>git branch -vv 查看本地分支对应的远程分区</li>
+<li>git branch -m oldName newName 给分支重命名</li>
 </ul>
 <p><strong>Note</strong> MAKE SURE to switch to the branch before making changes</p>
 <ul class="simple">
-<li>git merge _branchName（merge the current branch and the specified one）</li>
-<li>git status</li>
+<li>git merge _branchName 当前分支和指定分支合并</li>
 <li>esc+wq 退出VIM编辑器</li>
-<li>git commit -a（to commit all）-m（to add messages）</li>
 <li>git branch —merged</li>
 <li>git branch —no-merge</li>
-<li>git -d（to delete branch）_branchName</li>
-<li>git -D（force deletion）_branchName</li>
+<li>git -d（to delete branch）_branchName 删除分支</li>
+<li>git -D（force deletion）_branchName 强制删除分支</li>
 </ul>
+<p>一个来自w3c的cheatsheet
+<img alt="git cheatsheet" src="../_images/git.jpg" /></p>
 </div>
 
 

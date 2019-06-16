@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>作业2.1 人物介绍+CSS &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="作业2.2 制作登陆页面--给定psd" href="login.html" />
+    <link rel="prev" title="作业1 人物介绍" href="HW_intro.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">工具</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Agile_dev.html">敏捷需求管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Django.html">Django</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HTML &amp; CSS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实践及分析</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Server.html">配置云服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_intro.html">作业1 人物介绍</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">作业2.1 人物介绍+CSS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#">操作及收获</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#">添加中文字体样式：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style">一些style设置经验</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#">作业截图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">作业代码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="login.html">作业2.2 制作登陆页面--给定psd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW4_encrypt.html">作业4.1 数据加密</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>作业2.1 人物介绍+CSS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/hw/HW_intro_ad.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="css">
+<span id="css"></span><h1>作业2.1 人物介绍+CSS<a class="headerlink" href="#css" title="永久链接至标题">¶</a></h1>
+<p>作业要求： 给第一次作业的html添加CSS样式</p>
+<div class="section" id="">
+<span id="id1"></span><h2>操作及收获<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<ol class="simple">
+<li>导航栏设置，，使用底色（背景图片）+ 导航框 进行设置</li>
+<li>布局使用百分比，自适应浏览器大小</li>
+<li>表格下底边模仿百度百科设置点状线</li>
+<li>制作按钮，设置圆角，以及按钮选中时的样式</li>
+</ol>
+<div class="section" id="">
+<span id="id2"></span><h3>添加中文字体样式：<a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
+<p>华文细黑：STHeiti Light
+华文黑体：STHeiti
+华文楷体：STKaiti
+华文宋体：STSong
+华文仿宋：STFangsong
+黑体：SimHei
+宋体：SimSun
+新宋体：NSimSun
+仿宋：FangSong
+楷体：KaiTi
+仿宋_GB2312：FangSong_GB2312
+楷体_GB2312：KaiTi_GB2312</p>
+</div>
+<div class="section" id="style">
+<span id="style"></span><h3>一些style设置经验<a class="headerlink" href="#style" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code>设置margin和padding是没用的，只是一个横幅，不能作为块来看</li>
+<li>字符缩进 用<code class="docutils literal notranslate"><span class="pre">text-indent</span></code> em是一个字的大小，首行缩进2字符就是<code class="docutils literal notranslate"><span class="pre">text-indent:</span> <span class="pre">2em</span></code>，也可以使用首行缩进负值将字符隐藏</li>
+<li><code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>中的<code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code>属性代表单元格，设置下边的样式，可以实现单元格下划线</li>
+<li>设置container， 有助于将各元素约束到一起</li>
+<li>布局使用百分比设置，使用<code class="docutils literal notranslate"><span class="pre">z-index</span> <span class="pre">=</span> <span class="pre">-1</span></code>设置图片为背景</li>
+</ul>
+</div>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h2>作业截图<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<p><img alt="intro_ad" src="../_images/hw1-intro-ad.png" /></p>
+</div>
+<div class="section" id="">
+<span id="id4"></span><h2>作业代码<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh-CN&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;CSS/style.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Ariel Gao&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;作家三毛个人简介&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>三毛<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navi&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navi1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>首页<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navi1&quot;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>分类<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navi1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>百科<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navi1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>用户<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">#E6F4FF</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;heading&quot;</span><span class="p">&gt;</span>三毛<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;img/1.jpg&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;float: right;&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">20%</span> <span class="na">rightmarigin</span><span class="o">=</span><span class="s">&quot;100px&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>台湾著名女作家、旅行家<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag-more&quot;</span><span class="p">&gt;</span>点击<span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">https://baike.baidu.com/item/三毛?force=1</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot; blank &quot;</span><span class="p">&gt;</span>义项<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>选择浏览更多<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;intro&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>三毛（1943年3月26日－1991年1月4日），女，原名陈懋（mào）平（后改名为陈平），浙江定海（今舟山市定海区）人。1943年出生于重庆黄角桠<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>[1]<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>。中国现代作家。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>1948年，随父母迁居台湾。1967年赴西班牙留学，后去德国、美国等。1973年定居西属撒哈拉沙漠和<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">https://baike.baidu.com/item/荷西·马利安·葛罗/7840266?fromtitle=荷西&amp;fromid=5302449</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;blank&quot;</span><span class="p">&gt;</span>荷西<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>结婚。1981年回台后，曾在文化大学任教，1984年辞去教职，而以写作、演讲为重心。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>1991年1月4日，三毛在医院去世，年仅四十八岁。<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>[2]<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;info-table&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">80%</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">#e5f3ff</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>中文名：<span class="ni">&amp;nbsp;&amp;nbsp;</span>三毛（笔名）<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>职<span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>业：<span class="ni">&amp;nbsp;&amp;nbsp;</span>作家、旅行家、演讲家<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>外文名：<span class="ni">&amp;nbsp;&amp;nbsp;</span>ECHO<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>毕业院校：<span class="ni">&amp;nbsp;&amp;nbsp;</span>台北文化学院哲学系<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>别<span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>名：<span class="ni">&amp;nbsp;&amp;nbsp;</span>陈平（本名）、陈懋平（原名）<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>主要成就：<span class="ni">&amp;nbsp;&amp;nbsp;</span>台湾最受读者喜爱的作家之一 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>国<span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>籍：<span class="ni">&amp;nbsp;&amp;nbsp;</span>中国<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>代表作品：<span class="ni">&amp;nbsp;&amp;nbsp;</span>《梦里花落知多少》、《雨季不再来》、《撒哈拉的故事》 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>民<span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>族：<span class="ni">&amp;nbsp;&amp;nbsp;</span>汉族<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>籍<span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>贯：<span class="ni">&amp;nbsp;&amp;nbsp;</span>浙江舟山定海 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navi2&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>人物经历<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>主要作品<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>获奖记录<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>人物评价<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">#</span><span class="p">&gt;</span>人物轶事<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-share&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">autofocus</span><span class="p">&gt;</span>点击分享<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;footer&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;font-family: &#39;Courier New&#39;, Courier, monospacel; color:gainsboro&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Created by Yuxin Gao<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">time</span> <span class="na">pubdate</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&quot;2019-03-05&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">time</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Copyright: None<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-CSS notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">*</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">container</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">3</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E6F4FF</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">SimSun</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">navi</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#D5EDFF</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">STSong</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">navi</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">navy</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">15</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#C6E6FF</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">text-shadow</span><span class="p">:</span> <span class="mh">#3A77A6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">navi</span> <span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#AAAACE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">navi1</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">body</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">STSong</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">heading</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">STKaiti</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">45</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tag</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tag-more</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tag</span> <span class="nt">b</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">STKaiti</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">intro</span> <span class="nt">p</span> <span class="p">{</span>
+    <span class="k">text-indent</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">17</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">info-table</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">gray</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">info-table</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">dotted</span> <span class="kc">gray</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">navi2</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#185788</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">Cambria</span><span class="p">,</span> <span class="n">Cochin</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="n">Times</span><span class="p">,</span> <span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span> <span class="kc">serif</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">footer</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">3</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-share</span> <span class="nt">button</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#507C9D</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#FFD24D</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-share</span> <span class="nt">button</span><span class="p">:</span><span class="nd">focus</span> <span class="p">{</span>
+    <span class="k">border-color</span><span class="p">:</span> <span class="kc">lightgray</span><span class="p">;</span>
+    <span class="k">outline</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">gray</span><span class="p">;</span>
+    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span> <span class="kc">gray</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="login.html" class="btn btn-neutral float-right" title="作业2.2 制作登陆页面--给定psd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="HW_intro.html" class="btn btn-neutral" title="作业1 人物介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

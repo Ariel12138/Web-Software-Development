@@ -1,0 +1,233 @@
+## 作业2.1 人物介绍+CSS
+
+作业要求： 给第一次作业的html添加CSS样式
+
+### 操作及收获
+1. 导航栏设置，，使用底色（背景图片）+ 导航框 进行设置
+2. 布局使用百分比，自适应浏览器大小
+3. 表格下底边模仿百度百科设置点状线
+4. 制作按钮，设置圆角，以及按钮选中时的样式
+
+#### 添加中文字体样式：
+华文细黑：STHeiti Light
+华文黑体：STHeiti
+华文楷体：STKaiti
+华文宋体：STSong
+华文仿宋：STFangsong
+黑体：SimHei
+宋体：SimSun
+新宋体：NSimSun
+仿宋：FangSong
+楷体：KaiTi
+仿宋_GB2312：FangSong_GB2312
+楷体_GB2312：KaiTi_GB2312
+
+#### 一些style设置经验
+- `<span>`设置margin和padding是没用的，只是一个横幅，不能作为块来看
+- 字符缩进 用`text-indent` em是一个字的大小，首行缩进2字符就是`text-indent: 2em`，也可以使用首行缩进负值将字符隐藏
+- `<table>`中的`<td>`属性代表单元格，设置下边的样式，可以实现单元格下划线
+- 设置container， 有助于将各元素约束到一起
+- 布局使用百分比设置，使用`z-index = -1`设置图片为背景
+
+### 作业截图
+![intro_ad](../img/hw1-intro-ad.png)
+### 作业代码
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="author" content="Ariel Gao">
+    <meta name="Description" content="作家三毛个人简介">
+    <meta charset="UTF-8">
+    <title>三毛</title>
+</head>
+<div class="navi">
+    <nav>
+        <span class="navi1"><a href=#>首页</a></span>
+        <span class="navi1"> <a href=#>分类</a></span>
+        <span class="navi1"><a href=#>百科</a></span>
+        <span class="navi1"><a href=#>用户</a></span>
+    </nav>
+</div>
+
+
+<body bgcolor=#E6F4FF>
+    <div id="container">
+        <div class="heading">三毛</div>
+        <img src="img/1.jpg" style="float: right;" width=20% rightmarigin="100px">
+        <div class="tag">
+            <b>台湾著名女作家、旅行家</b> <span class="tag-more">点击<i><a href=https://baike.baidu.com/item/三毛?force=1 target=" blank ">义项</a></i>选择浏览更多</span>
+        </div>
+        <p></p>
+        <div class="intro">
+            <p>三毛（1943年3月26日－1991年1月4日），女，原名陈懋（mào）平（后改名为陈平），浙江定海（今舟山市定海区）人。1943年出生于重庆黄角桠<sup>[1]</sup>。中国现代作家。</p>
+            <p>1948年，随父母迁居台湾。1967年赴西班牙留学，后去德国、美国等。1973年定居西属撒哈拉沙漠和<a href=https://baike.baidu.com/item/荷西·马利安·葛罗/7840266?fromtitle=荷西&fromid=5302449 target="blank">荷西</a>结婚。1981年回台后，曾在文化大学任教，1984年辞去教职，而以写作、演讲为重心。</p>
+            <p>1991年1月4日，三毛在医院去世，年仅四十八岁。<sup>[2]</sup></p>
+        </div>
+        <div class="info-table">
+            <table border="0" width=80% bgcolor=#e5f3ff>
+                <tr>
+                    <td>中文名：&nbsp;&nbsp;三毛（笔名）</td>
+                    <td>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：&nbsp;&nbsp;作家、旅行家、演讲家</td>
+                </tr>
+                <tr>
+                    <td>外文名：&nbsp;&nbsp;ECHO</td>
+                    <td>毕业院校：&nbsp;&nbsp;台北文化学院哲学系</td>
+                </tr>
+                <tr>
+                    <td>别&nbsp;&nbsp;&nbsp;名：&nbsp;&nbsp;陈平（本名）、陈懋平（原名）</td>
+                    <td>主要成就：&nbsp;&nbsp;台湾最受读者喜爱的作家之一 </td>
+                </tr>
+                <tr>
+                    <td>国&nbsp;&nbsp;&nbsp;籍：&nbsp;&nbsp;中国</td>
+                    <td>代表作品：&nbsp;&nbsp;《梦里花落知多少》、《雨季不再来》、《撒哈拉的故事》 </td>
+                </tr>
+                <tr>
+                    <td>民&nbsp;&nbsp;&nbsp;族：&nbsp;&nbsp;汉族</td>
+                    <td>籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯：&nbsp;&nbsp;浙江舟山定海 </td>
+                </tr>
+            </table>
+        </div>
+        <div class="navi2">
+            <span class="span2"><a href=#>人物经历</a></span>
+            <span class="span2"><a href=#>主要作品</a></span>
+            <span class="span2"><a href=#>获奖记录</a></span>
+            <span class="span2"><a href=#>人物评价</a></span>
+            <span class="span2"><a href=#>人物轶事</a></span>
+        </div>
+        <div class="btn-share">
+            <button type="button" autofocus>点击分享</button>
+        </div>
+    </div>
+</body>
+<div class="footer">
+    <footer style="font-family: 'Courier New', Courier, monospacel; color:gainsboro">
+        <p>Created by Yuxin Gao</p>
+        <p><time pubdate datetime="2019-03-05"></time></p>
+        <p>Copyright: None</p>
+    </footer>
+</div>
+
+</html>
+```
+```CSS
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* a {
+    text-decoration: none;
+}
+
+#container {
+    margin: 3%;
+    background-color: #E6F4FF;
+    font-family: SimSun;
+    font-size: 20px;
+}
+
+.navi {
+    background-color: #D5EDFF;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-family: STSong;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.navi a {
+    color: navy;
+    display: inline-block;
+    width: 15%;
+    background-color: #C6E6FF;
+    height: 30px;
+    text-shadow: #3A77A6;
+}
+
+.navi a:hover {
+    color: #AAAACE;
+}
+
+.navi1 {
+    width: 200px;
+}
+
+.body {
+    font-family: STSong;
+    font-size: 10px;
+}
+
+.heading {
+    text-align: left;
+    font-family: STKaiti;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.tag-more {
+    font-size: 14px;
+}
+
+.tag b {
+    font-family: STKaiti;
+}
+
+.intro p {
+    text-indent: 2em;
+    font-size: 17px;
+}
+
+.info-table {
+    color: gray;
+    margin: 15px 10px 10px 5px;
+    font-size: 16px;
+}
+
+.info-table td {
+    border-bottom: 1px dotted gray;
+    height: 30px;
+    width: 20%;
+}
+
+.navi2 a {
+    display: inline-block;
+    text-decoration: underline;
+    color: #185788;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    width: 80px;
+}
+
+.footer {
+    margin-left: 3%;
+    font-size: 13px;
+}
+
+.btn-share button {
+    display: inline-block;
+    color: #507C9D;
+    background-color: #FFD24D;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-share button:focus {
+    border-color: lightgray;
+    outline: none !important;
+    border: 1px solid gray;
+    box-shadow: 0 0 10px gray;
+}
+```

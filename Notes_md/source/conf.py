@@ -24,7 +24,7 @@ copyright = '2019, Yuxin Gao'
 author = 'Yuxin Gao'
 
 # The short X.Y version
-version = ''
+version = '2.0'
 # The full version, including alpha/beta/rc tags
 release = '1'
 
