@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Liquid 模版语言 &mdash; 互联网软件开发与实践学习笔记 1 documentation</title>
+  <title>Liquid 模版语言 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
   
 
   
@@ -26,8 +26,8 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="WordPress" href="WP.html" />
     <link rel="prev" title="Django" href="Django.html" /> 
 
@@ -115,6 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../hw/login.html">作业2.2 制作登陆页面–给定psd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hw/HW4_encrypt.html">作业4.1 数据加密</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/Project.html">日程管理项目报告</a></li>
 </ul>
 
             
@@ -180,26 +181,34 @@
            <div itemprop="articleBody">
             
   <div class="section" id="liquid">
-<span id="liquid"></span><h1>Liquid 模版语言<a class="headerlink" href="#liquid" title="Permalink to this headline">¶</a></h1>
+<span id="liquid"></span><h1>Liquid 模版语言<a class="headerlink" href="#liquid" title="永久链接至标题">¶</a></h1>
 <div class="section" id="">
-<span id="id1"></span><h2>基本<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>基本<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="">
-<span id="id2"></span><h2>介绍<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>介绍<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
 <p>liquid语言可以分为三类，objects，tags，和filters</p>
-<p>objects，即标记在页面上显示内容的区域，用两个花括号如 <code class="docutils literal notranslate"><span class="pre">{{content}}</span></code></p>
+<p>objects，即标记在页面上显示内容的区域，用两个花括号,如</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="p">}}</span>
+</pre></div>
+</div>
 <p>tags，为模版创建逻辑和控制流时使用，用<code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">%}</span></code>围住，可以用tags写条件和循环，tags按照功能可以分为三类，控制流，迭代，和分配变量</p>
-<p>filters，用于改变object的输出，在object中使用，并用<code class="docutils literal notranslate"><span class="pre">|</span></code>隔开，如<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">&quot;/my/fancy/url&quot;</span> <span class="pre">|</span> <span class="pre">append:</span> <span class="pre">&quot;.html&quot;}}</span></code>输出结果为<code class="docutils literal notranslate"><span class="pre">/my/fancy/url.html</span></code></p>
+<p>filters，用于改变object的输出，在object中使用，并用<code class="docutils literal notranslate"><span class="pre">|</span></code>隔开，如</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;/my/fancy/url&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.html&quot;</span><span class="p">}}</span>
+
+/my/fancy/url.html
+</pre></div>
+</div>
 </div>
 <div class="section" id="">
-<span id="id3"></span><h2>运算符<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>运算符<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="">
-<span id="id4"></span><h2>逻辑真假<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id4"></span><h2>逻辑真假<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
 <p>字符串，空内容，0等判断为真，nil 和 false 判断为假</p>
 </div>
 <div class="section" id="">
-<span id="id5"></span><h2>数据类型<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>数据类型<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
 </div>
 </div>
 
@@ -246,7 +255,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
-            LANGUAGE:'zh-CN',
+            LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -256,6 +265,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

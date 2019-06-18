@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>作业4.1 数据加密 &mdash; 互联网软件开发与实践学习笔记 1 documentation</title>
+  <title>作业4.1 数据加密 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
   
 
   
@@ -26,8 +26,9 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="日程管理项目报告" href="Project.html" />
     <link rel="prev" title="作业2.3 根据PSD素材制作登陆界面" href="HW_login.html" /> 
 
   
@@ -88,12 +89,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/Agile_dev.html">敏捷需求管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/Django.html">Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Liquid.html">Liquid 模版语言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/WP.html">WordPress</a></li>
 </ul>
-<p class="caption"><span class="caption-text">HTML &amp; CSS</span></p>
+<p class="caption"><span class="caption-text">网站开发</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_1.html">使用Jekyll自定义主题和网页</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
 </ul>
 <p class="caption"><span class="caption-text">实践及分析</span></p>
 <ul class="current">
@@ -121,6 +126,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Project.html">日程管理项目报告</a></li>
 </ul>
 
             
@@ -186,16 +192,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="">
-<span id="id1"></span><h1>作业4.1 数据加密<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>作业4.1 数据加密<a class="headerlink" href="#" title="永久链接至标题">¶</a></h1>
 <p>作业要求：使用HTTPS协议，用户登陆功能，在提交时，分析数据包前端加密和后端加密的优缺点</p>
 <div class="section" id="https-http">
-<span id="https-http"></span><h2>HTTPS 与 HTTP<a class="headerlink" href="#https-http" title="Permalink to this headline">¶</a></h2>
+<span id="https-http"></span><h2>HTTPS 与 HTTP<a class="headerlink" href="#https-http" title="永久链接至标题">¶</a></h2>
 <div class="section" id="http">
-<span id="http"></span><h3>HTTP<a class="headerlink" href="#http" title="Permalink to this headline">¶</a></h3>
+<span id="http"></span><h3>HTTP<a class="headerlink" href="#http" title="永久链接至标题">¶</a></h3>
 <p>是互联网上应用最广泛的网络协议，是一个客户端和服务器端请求和应答的标准，用于从WWW服务器传输超文本到本地浏览器的传输协议，使浏览器更加高效，减少网络传输。以明文方式发送内容，不提供任何方式的数据加密，http不适合传输敏感信息。</p>
 </div>
 <div class="section" id="https">
-<span id="https"></span><h3>HTTPS<a class="headerlink" href="#https" title="Permalink to this headline">¶</a></h3>
+<span id="https"></span><h3>HTTPS<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h3>
 <p>安全套接字层超文本传输协议。为了数据传输安全，https在http的基础上加入了SSL协议，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
 <ul class="simple">
 <li>HTTPS 工作原理：<ul>
@@ -211,10 +217,10 @@
 </ul>
 </div>
 <div class="section" id="">
-<span id="id2"></span><h3>加密概述<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3>加密概述<a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
 </div>
 <div class="section" id="">
-<span id="id3"></span><h3>公钥私钥加密<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<span id="id3"></span><h3>公钥私钥加密<a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>加密：通过加密算法和公钥对内容(或者说明文)进行加密，得到密文。加密过程需要用到公钥。</li>
 <li>解密：通过解密算法和私钥对密文进行解密，得到明文。解密过程需要用到解密算法和私钥。注意，由公钥加密的内容，只能由私钥进行解密，也就是说，由公钥加密的内容，如果不知道私钥，是无法解密的。</li>
@@ -222,14 +228,14 @@
 </ul>
 </div>
 <div class="section" id="">
-<span id="id4"></span><h3>对称加密 &amp; 非对称加密<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3>对称加密 &amp; 非对称加密<a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>对称加密：加密使用的密钥和解密使用的密钥是相同的，要做好密钥的保密工作。不区分公钥和私钥。</li>
 <li>非对称加密：加密的密钥和解密的密钥是不同的。</li>
 </ul>
 </div>
 <div class="section" id="">
-<span id="id5"></span><h3>加密过程<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<span id="id5"></span><h3>加密过程<a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
 <ol class="simple">
 <li>前端生成AES随机密钥，加密要发送的数据</li>
 <li>用后端给的RSA公钥对这个随机的AES私钥加密，请求时同时发送</li>
@@ -239,9 +245,9 @@
 </div>
 </div>
 <div class="section" id="">
-<span id="id6"></span><h2>前端 &amp; 后端加密<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id6"></span><h2>前端 &amp; 后端加密<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
 <div class="section" id="">
-<span id="id7"></span><h3>前端加密<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<span id="id7"></span><h3>前端加密<a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
 <p>前端加密方法：使用https、使用JavaScript加密后传输、浏览器插件内加密传输。主要分析使用https进行前端加密的优缺点</p>
 <ul class="simple">
 <li>优点<ul>
@@ -260,7 +266,7 @@
 </li>
 </ul>
 <div class="section" id="">
-<span id="id8"></span><h4>后端加密<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
+<span id="id8"></span><h4>后端加密<a class="headerlink" href="#" title="永久链接至标题">¶</a></h4>
 </div>
 </div>
 </div>
@@ -273,6 +279,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Project.html" class="btn btn-neutral float-right" title="日程管理项目报告" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="HW_login.html" class="btn btn-neutral" title="作业2.3 根据PSD素材制作登陆界面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -307,7 +315,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'1',
-            LANGUAGE:'zh-CN',
+            LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -317,6 +325,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   

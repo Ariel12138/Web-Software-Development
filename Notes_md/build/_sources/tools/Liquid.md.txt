@@ -6,11 +6,19 @@
 
 liquid语言可以分为三类，objects，tags，和filters
 
-objects，即标记在页面上显示内容的区域，用两个花括号如 `{{content}}`
+objects，即标记在页面上显示内容的区域，用两个花括号,如
+ ```liquid
+ {{ content }}
+ ```
 
-tags，为模版创建逻辑和控制流时使用，用`{% %}`围住，可以用tags写条件和循环，tags按照功能可以分为三类，控制流，迭代，和分配变量
+tags，为模版创建逻辑和控制流时使用，用```{% %}```围住，可以用tags写条件和循环，tags按照功能可以分为三类，控制流，迭代，和分配变量
 
-filters，用于改变object的输出，在object中使用，并用`|`隔开，如`{{ "/my/fancy/url" | append: ".html"}}`输出结果为`/my/fancy/url.html`
+filters，用于改变object的输出，在object中使用，并用`|`隔开，如
+```liquid
+{{ "/my/fancy/url" | append: ".html"}}
+
+/my/fancy/url.html
+```
 
 ### 运算符
 
