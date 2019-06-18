@@ -1,0 +1,98 @@
+## 日程管理项目报告
+
+高裕欣 1801210512
+
+**Story**：作废职位  
+
+**分解Task**
+
+  - 显示职位列表
+  - 作废职位功能
+  - 前端界面连接  
+
+  
+
+### **实现**：  
+
+- 显示职位列表
+
+  - MVC分离，对数据库进行增删查改的内容放进model
+
+  - 在model中写函数获取用户职位列表
+
+  - 在controller中，调用model中的获取职位列表方法，获取到的内容暂存在position变量中，然后传入变量list，将list的内容与前端相匹配，方法名与view中的html文件相对应
+
+  - 代码如下
+
+    ```php
+    public function index() {
+            $position = model('Position');
+            $list = $position->getUserPositionList();
+            //dump($list);
+            //exit;
+            $this->assign("position_list", $list);
+            return $this->fetch();
+        }
+    
+    public function getUserPositionList(){
+         $list = Db::table('user_position')
+                    ->select();
+         return $list;
+     }
+    ```
+
+- 作废职位功能
+
+  - controller中调用作废方法，将当前id的职位作废，完成后再将页面重定向到职位列表页面，否则页面不刷新
+
+    - 问题：点击作废之后出现404，原因是重定向路径`'/usermanage/position/index'`写法错误，解决方案——去掉斜杠
+
+  - 在model中使用的方法，将变量data设定为数组，将是否删除的字段"is_delete"设定为1，获取当前时间存入dalete_time，再将对应当前id的数据使用update方法进行更新
+
+  - 代码如下
+
+    ```php
+     public function invalid($user_id)
+        {
+            //调用model中的方法，保证MVC分离
+            $position = model('Position');
+            $position -> invalid($user_id);
+            $this->redirect('usermanage/position/index');
+        }
+    
+     function invalid($user_id) {
+            $data = array();
+            $data['is_delete'] = 1;
+            $data['delete_time'] =  Db::raw('now()');
+            Db::table('user_position')->where('id', $user_id)->update($data);
+        }
+    ```
+
+- 连接前端页面
+
+  - 通过volist循环输出用户职位列表
+
+    - 问题，本地测试正常，push到dev分支并部署后界面显示id="vo"错误，经过多番查找，原因是与其他同学的volist重名list…… 更改为position_list后错误得以修复
+
+  - 代码如下
+
+    ```html
+    {volist name="position_list" id="vo"}
+    <tr>
+    	<td class="serial">{$vo.id}.
+      </td>
+    	<td> <span class="product">{$vo.name}</span> 
+      </td>
+    	<td> <span class="product">{eq name="vo.is_delete" value="0"}正常{else/}已作废{/eq}</span> 
+      </td>
+    	<td>
+    		<button type="button" class="btn btn-primary btn-sm mb-1" data-			toggle="modal" data-target="#smallmodal"><i class="fa fa-magic"></i>&nbsp;编辑
+        </button> {eq name="vo.is_delete" value="0"}<a href="{:url('/usermanage/position/invalid','user_id='.$vo.id);}">
+        <button type="button" class="btn btn-danger btn-sm mb-1"><i class="fa fa-exclamation"></i>&nbsp;作废
+        </button></a>{else/}<a href="{:url('/usermanage/position/restore','user_id='.$vo.id);}">
+        <button type="button" class="btn btn-success btn-sm mb-1"><i class="fa fa-exclamation"></i>&nbsp;恢复
+        </button></a>{/eq}
+    	</td>
+    </tr>
+    {/volist}
+    ```

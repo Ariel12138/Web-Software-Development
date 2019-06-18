@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WordPress &mdash; 互联网软件开发与实践学习笔记 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="HTML 基础" href="../html/HTML_basic.html" />
+    <link rel="prev" title="Liquid 模版语言" href="Liquid.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">工具</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agile_dev.html">敏捷需求管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Liquid.html">Liquid 模版语言</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">WordPress</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#">操作步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">文章格式管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">多媒体管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">分类法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">小工具</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">网站开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_1.html">使用Jekyll自定义主题和网页</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实践及分析</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hw/Server.html">配置云服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro.html">作业1 人物介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro_ad.html">作业2.1 人物介绍+CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/login.html">作业2.2 制作登陆页面–给定psd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW4_encrypt.html">作业4.1 数据加密</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>WordPress</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/WP.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wordpress">
+<span id="wordpress"></span><h1>WordPress<a class="headerlink" href="#wordpress" title="Permalink to this headline">¶</a></h1>
+<p>环境：Apache + MySQL + PHP</p>
+<p>域名备案</p>
+<div class="section" id="">
+<span id="id1"></span><h2>操作步骤<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>下载wordpress</p>
+<p>启动环境 Apache + MySQL</p>
+<p>创建数据库</p>
+<p>把wordpress 放到mamp下的htdocs（默认目录）</p>
+<p>添加数据库</p>
+<p>Post 文章 可以更新</p>
+<p>Page 页面 静态页面</p>
+</div>
+<div class="section" id="">
+<span id="id2"></span><h2>文章格式管理<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>实现”阅读更多”</p>
+<ul class="simple">
+<li>文本模式 —&gt; more</li>
+<li>可视化添加标记</li>
+</ul>
+<p>分页<code class="docutils literal notranslate"><span class="pre">&lt;!--nextpage--&gt;</span></code>实现分页器</p>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h2>多媒体管理<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>图片编辑</p>
+<ul class="simple">
+<li>修改标题</li>
+<li>加入说明（会显示在图片下方）</li>
+<li>替代文本（图片无法显示时）</li>
+<li>图像描述</li>
+<li>编辑图片（可以选择修改缩略图）</li>
+<li>可以先创建相册，再把相册添加到文章中</li>
+<li>插件 jQuery Colorbox 可以在当前页面查看图片</li>
+</ul>
+<p>视频管理</p>
+<ul class="simple">
+<li>插件 media-element-html5-video-and-audio-player<ul>
+<li>设置–设置默认宽度高度</li>
+<li>写文章—添加媒体—[vedio src=”” poster=”“]</li>
+<li>poster属性可以将图片设置为视频封面</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id4"></span><h2>分类法<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>分类目录（有层级 插件显示分类）&amp; 标签（贴标签）</p>
+<p>分类目录</p>
+<ul class="simple">
+<li>名称—–别名（令url更美观）</li>
+<li>添加分类时选择父级—–创建子级分类</li>
+<li>未分类的会放在”未分类下”</li>
+<li>子分类的内容也会显示在父级目录中</li>
+</ul>
+<p>设置菜单 — 向右拖动可以设置子菜单</p>
+</div>
+<div class="section" id="">
+<span id="id5"></span><h2>小工具<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>hide widget title 在前台隐藏小工具标题</li>
+<li>用文本小工具添加图片 分享</li>
+<li>Dynamic Widgets 可以设置显示小工具的条件（如根据用户 时间 分类 浏览器等条件）</li>
+<li>members 插件  设置角色权限（注意添加新的插件后要修改管理员的权限包含新插件的所有功能）设置内容权限</li>
+<li>在文章内容中插入<code class="docutils literal notranslate"><span class="pre">[access</span> <span class="pre">role=&quot;Role&quot;][/access]</span></code>可以设置仅某些角色可以查看具体内容</li>
+<li>表单插件 WordPress Form Manager<ul>
+<li>插入表单：新建页面<code class="docutils literal notranslate"><span class="pre">[form</span> <span class="pre">form-name]</span></code></li>
+<li>编辑表单条件，可以根据选择的内容显示不同的项目</li>
+<li>高级选项：选择行为类型</li>
+<li>选择数据可查看用户提交的信息</li>
+</ul>
+</li>
+<li>活动插件 event-manager<ul>
+<li>显示日历：创建页面，在内容中添加 <code class="docutils literal notranslate"><span class="pre">[events_calender</span> <span class="pre">full=1]</span></code> full=1</li>
+<li>插件 full-calender 可以切换日历的显示（月/周/天） 选择活动分类</li>
+</ul>
+</li>
+<li>广告插件 wp125</li>
+<li>自动备份插件 backwpup 备份内容、备份频率、保存路径</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../html/HTML_basic.html" class="btn btn-neutral float-right" title="HTML 基础" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Liquid.html" class="btn btn-neutral" title="Liquid 模版语言" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh-CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -15,14 +15,19 @@
    tools/IconMoon.md
    tools/Agile_dev.md
    tools/Django.md
+   tools/Liquid.md
+   tools/WP.md
 
 .. toctree::
    :maxdepth: 1
-   :caption: HTML & CSS
+   :caption: 网站开发
    
    html/HTML_basic.md
    html/CSS_basic.md
    html/CSS_box_position.md
+   jekyll/Jekyll_1.md
+   jekyll/Jekyll_HelpCenter.md
+
 
 
 .. toctree::
@@ -35,6 +40,7 @@
    hw/login.md
    hw/HW_login.md
    hw/HW4_encrypt.md
+   hw/Project.md
    
    
    

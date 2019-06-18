@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Liquid 模版语言 &mdash; 互联网软件开发与实践学习笔记 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WordPress" href="WP.html" />
+    <link rel="prev" title="Django" href="Django.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 互联网软件开发与实践学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">工具</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Agile_dev.html">敏捷需求管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Liquid 模版语言</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#">基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">运算符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">逻辑真假</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">数据类型</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WP.html">WordPress</a></li>
+</ul>
+<p class="caption"><span class="caption-text">网站开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_1.html">使用Jekyll自定义主题和网页</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
+</ul>
+<p class="caption"><span class="caption-text">实践及分析</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hw/Server.html">配置云服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro.html">作业1 人物介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_intro_ad.html">作业2.1 人物介绍+CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/login.html">作业2.2 制作登陆页面–给定psd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW_login.html">作业2.3 根据PSD素材制作登陆界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hw/HW4_encrypt.html">作业4.1 数据加密</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">互联网软件开发与实践学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Liquid 模版语言</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/Liquid.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="liquid">
+<span id="liquid"></span><h1>Liquid 模版语言<a class="headerlink" href="#liquid" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="">
+<span id="id1"></span><h2>基本<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="">
+<span id="id2"></span><h2>介绍<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>liquid语言可以分为三类，objects，tags，和filters</p>
+<p>objects，即标记在页面上显示内容的区域，用两个花括号如 <code class="docutils literal notranslate"><span class="pre">{{content}}</span></code></p>
+<p>tags，为模版创建逻辑和控制流时使用，用<code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">%}</span></code>围住，可以用tags写条件和循环，tags按照功能可以分为三类，控制流，迭代，和分配变量</p>
+<p>filters，用于改变object的输出，在object中使用，并用<code class="docutils literal notranslate"><span class="pre">|</span></code>隔开，如<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">&quot;/my/fancy/url&quot;</span> <span class="pre">|</span> <span class="pre">append:</span> <span class="pre">&quot;.html&quot;}}</span></code>输出结果为<code class="docutils literal notranslate"><span class="pre">/my/fancy/url.html</span></code></p>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h2>运算符<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="">
+<span id="id4"></span><h2>逻辑真假<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<p>字符串，空内容，0等判断为真，nil 和 false 判断为假</p>
+</div>
+<div class="section" id="">
+<span id="id5"></span><h2>数据类型<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="WP.html" class="btn btn-neutral float-right" title="WordPress" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Django.html" class="btn btn-neutral" title="Django" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yuxin Gao.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            LANGUAGE:'zh-CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
