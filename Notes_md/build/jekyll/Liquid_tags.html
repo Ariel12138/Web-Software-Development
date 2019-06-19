@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Liquid 语言 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
+  <title>Liquid Tags 语法 &mdash; 互联网软件开发与实践学习笔记 1 文档</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="WordPress" href="WP.html" />
-    <link rel="prev" title="Django" href="Django.html" /> 
+    <link rel="next" title="Liquid 循环迭代" href="Liquid_iteration.html" />
+    <link rel="prev" title="基于 jekyll 开发帮助中心" href="Jekyll_HelpCenter.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -83,31 +83,27 @@
             
             
               <p class="caption"><span class="caption-text">工具</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Git.html">Git &amp; Github 使用</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VScode.html">VScode 使用笔记</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IconMoon.html">使用 IconMoon 生成字体图标</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Agile_dev.html">敏捷需求管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Django.html">Django</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Liquid 语言</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#">介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#">基本分类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#">运算符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#">逻辑真假</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#">数据类型</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="WP.html">WordPress</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Git.html">Git &amp; Github 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/VScode.html">VScode 使用笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Agile_dev.html">敏捷需求管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Django.html">Django</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Liquid.html">Liquid 语言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/WP.html">WordPress</a></li>
 </ul>
 <p class="caption"><span class="caption-text">网站开发</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../html/HTML_basic.html">HTML 基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../html/CSS_basic.html">CSS 基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../html/CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_1.html">使用Jekyll自定义主题和网页</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../jekyll/Liquid_tags.html">Liquid Tags 语法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../jekyll/Liquid_iteration.html">Liquid 循环迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jekyll_1.html">使用Jekyll自定义主题和网页</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Liquid Tags 语法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#">控制流</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Liquid_iteration.html">Liquid 循环迭代</a></li>
 </ul>
 <p class="caption"><span class="caption-text">实践及分析</span></p>
 <ul>
@@ -163,13 +159,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Liquid 语言</li>
+      <li>Liquid Tags 语法</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/tools/Liquid.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/jekyll/Liquid_tags.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,43 +178,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="liquid">
-<span id="liquid"></span><h1>Liquid 语言<a class="headerlink" href="#liquid" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="liquid-tags">
+<span id="liquid-tags"></span><h1>Liquid Tags 语法<a class="headerlink" href="#liquid-tags" title="永久链接至标题">¶</a></h1>
 <div class="section" id="">
-<span id="id1"></span><h2>介绍<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<p>Liquid是一门开源模版语言，用于加载动态内容。</p>
-</div>
-<div class="section" id="">
-<span id="id2"></span><h2>基本分类<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<p>liquid代码可以分为三类，objects，tags，和filters三类</p>
-<p><strong>objects</strong>，即标记在页面上显示内容的区域，用两个花括号,如</p>
-<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
+<span id="id1"></span><h2>控制流<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<p><strong>if控制流</strong></p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span>{% if product.title == &#39;Awesome Shoes&#39; %}
+  These shoes are awesome!
+{% endif %}
 </pre></div>
 </div>
-<p><strong>tags</strong>,为模版创建逻辑和控制流时使用，用花括号和百分号围住，可以用tags写条件和循环，tags按照功能可以分为三类，控制流，迭代，和分配变量。</p>
-<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="p">%}</span>
-  Hello <span class="p">{{</span><span class="w"> </span><span class="nv">user</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span>!
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+<p><strong>unless控制流</strong></p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span>{% unless product.title == &#39;Awesome Shoes&#39; %}
+  These shoes are not awesome.
+{% endunless %}
 </pre></div>
 </div>
-<p><strong>filters</strong>，用于改变object的输出，在object中使用，并用<code class="docutils literal notranslate"><span class="pre">|</span></code>隔开，如</p>
-<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;/my/fancy/url&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.html&quot;</span><span class="p">}}</span>
-
-/my/fancy/url.html
+<p>等同于</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">product</span><span class="o">.</span><span class="n">title</span> <span class="o">!=</span> <span class="s1">&#39;Awesome Shoes&#39;</span> <span class="o">%</span><span class="p">}</span>
+  <span class="n">These</span> <span class="n">shoes</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">awesome</span><span class="o">.</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
 </pre></div>
 </div>
+<p><strong>elsif/else控制流</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{% if customer.name == &#39;kevin&#39; %}
+  Hey Kevin!
+{% elsif customer.name == &#39;anonymous&#39; %}
+  Hey Anonymous!
+{% else %}
+  Hi Stranger!
+{% endif %}
+</pre></div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>运算符<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<p><strong>case/when控制流</strong></p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cake&#39;</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">case</span><span class="w"> </span><span class="nv">handle</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="s1">&#39;cake&#39;</span><span class="w"> </span><span class="p">%}</span>
+     This is a cake
+  <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="s1">&#39;cookie&#39;</span><span class="w"> </span><span class="p">%}</span>
+     This is a cookie
+  <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+     This is not a cake nor a cookie
+<span class="p">{%</span><span class="w"> </span><span class="kr">endcase</span><span class="w"> </span><span class="p">%}</span>
+</pre></div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>逻辑真假<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<p>字符串，空内容，0等判断为真，nil 和 false 判断为假</p>
-</div>
-<div class="section" id="">
-<span id="id5"></span><h2>数据类型<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<p>有字符串，数字，布尔，Nil，和数组五中字符类型。</p>
-<p>官方链接：https://liquid.bootcss.com</p>
 </div>
 </div>
 
@@ -230,10 +233,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="WP.html" class="btn btn-neutral float-right" title="WordPress" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Liquid_iteration.html" class="btn btn-neutral float-right" title="Liquid 循环迭代" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Django.html" class="btn btn-neutral" title="Django" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Jekyll_HelpCenter.html" class="btn btn-neutral" title="基于 jekyll 开发帮助中心" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

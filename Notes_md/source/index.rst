@@ -27,6 +27,8 @@
    html/CSS_box_position.md
    jekyll/Jekyll_1.md
    jekyll/Jekyll_HelpCenter.md
+   jekyll/Liquid_tags.md
+   jekyll/Liquid_iteration.md
 
 
 
