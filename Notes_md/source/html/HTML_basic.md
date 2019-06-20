@@ -97,4 +97,22 @@ Html 颜色：
 
 ### 图片标签
 
-#### 
+表格标签用`<table>`表示。一个表格`<table>`是由每行`<tr>`组成的，每行是由每个单元格`<td>`组成的。  
+一个表格是由行组成的（行是由列组成的），而不是由行和列组成的。
+```html
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+```
+表格`<table>`属性
+- `border`：边框，像素为单位
+- `style="border-collapse:collapse;"`：单元格的线和表格的边框线合并（表格的两边框合并为一条）
+- `width`：宽度
+- `height`：高度
+- `bordercolor`：表格的边框颜色。
+- `align`：表格水平对齐方式，可以填：left right center

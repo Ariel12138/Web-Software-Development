@@ -89,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/IconMoon.html">使用 IconMoon 生成字体图标</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/Agile_dev.html">敏捷需求管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/Django.html">Django</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/Liquid.html">Liquid 模版语言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/Liquid.html">Liquid 语言</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/WP.html">WordPress</a></li>
 </ul>
 <p class="caption"><span class="caption-text">网站开发</span></p>
@@ -97,16 +97,17 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">HTML 基础</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#html">Html结构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#">排版标签：</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#">图片标签</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#"></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#">图片标签</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">列表标签</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#">表格标签</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CSS_basic.html">CSS 基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CSS_box_position.html">CSS 盒子/浮动/定位</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_1.html">使用Jekyll自定义主题和网页</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jekyll/Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Liquid_tags.html">Liquid Tags 语法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jekyll/Liquid_iteration.html">Liquid 循环迭代</a></li>
 </ul>
 <p class="caption"><span class="caption-text">实践及分析</span></p>
 <ul>
@@ -292,9 +293,58 @@
 </div>
 <div class="section" id="">
 <span id="id3"></span><h2>图片标签<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
-<div class="section" id="">
-<span id="id4"></span><h3><a class="headerlink" href="#" title="永久链接至标题">¶</a></h3>
+<p>img 是单边标记标签</p>
+<ul class="simple">
+<li>src属性：图片的相对路径和绝对路径</li>
+<li>width：宽度</li>
+<li>height：高度</li>
+<li>align：水平对齐方式，有left、center、right、bottom、top</li>
+<li><strong>title</strong>：提示性文本，鼠标悬停时出现的文本</li>
+<li>border：图片的边框，单位是像素，边边框颜色是黑色</li>
+<li>Hspace：图片左右的边距</li>
+<li>Vspace；图片上下的边距</li>
+<li>Alt：图片无法显示时的代替信息</li>
+</ul>
 </div>
+<div class="section" id="">
+<span id="id4"></span><h2>列表标签<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<p>无序列表<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>，有序列表<code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span></code></p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>不能单独存在，必须包裹在列表内部</li>
+<li>无序列表的项目符号可以通过type属性更改，如square/circle，也可以通过css设置为图片</li>
+<li>有序列表的type属性之可以是1、a、A、i、I，结合start属性表示从几开始</li>
+<li>列表之间可以嵌套</li>
+<li><code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span></code>可以用于做网站的导航条</li>
+<li><code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>中放置的内容可以很多</li>
+</ul>
+<p>定义列表<code class="docutils literal notranslate"><span class="pre">&lt;dl&gt;</span></code></p>
+<ul class="simple">
+<li>dl的子元素只能是dt和dd，<code class="docutils literal notranslate"><span class="pre">&lt;dt&gt;</span></code>列表标题，是必须的，<code class="docutils literal notranslate"><span class="pre">&lt;dd&gt;</span></code>是列表的列表项，如果不需要可以不要</li>
+<li>dl和dd都是容器级别的标签，想放什么都可以</li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id5"></span><h2>表格标签<a class="headerlink" href="#" title="永久链接至标题">¶</a></h2>
+<p>表格标签用<code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>表示。一个表格<code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>是由每行<code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code>组成的，每行是由每个单元格<code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code>组成的。一个表格是由行组成的（行是由列组成的），而不是由行和列组成的。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>表格<code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>属性</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">border</span></code>：边框，像素为单位</li>
+<li><code class="docutils literal notranslate"><span class="pre">style=&quot;border-collapse:collapse;&quot;</span></code>：单元格的线和表格的边框线合并（表格的两边框合并为一条）</li>
+<li><code class="docutils literal notranslate"><span class="pre">width</span></code>：宽度</li>
+<li><code class="docutils literal notranslate"><span class="pre">height</span></code>：高度</li>
+<li><code class="docutils literal notranslate"><span class="pre">bordercolor</span></code>：表格的边框颜色。</li>
+<li><code class="docutils literal notranslate"><span class="pre">align</span></code>：表格水平对齐方式，可以填：left right center</li>
+</ul>
 </div>
 </div>
 

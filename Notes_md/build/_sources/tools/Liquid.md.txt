@@ -34,6 +34,3 @@ liquid代码可以分为三类，objects，tags，和filters三类
 ### 数据类型
 有字符串，数字，布尔，Nil，和数组五中字符类型。  
 
-
-官方链接：https://liquid.bootcss.com
-
