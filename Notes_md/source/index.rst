@@ -43,15 +43,3 @@
    hw/HW_login.md
    hw/HW4_encrypt.md
    hw/Project.md
-   
-   
-   
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
