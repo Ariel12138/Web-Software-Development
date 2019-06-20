@@ -103,6 +103,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Liquid 循环迭代</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#for">for 循环</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cycle">cycle 循环</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tablerow">tablerow</a></li>
 </ul>
 </li>
 </ul>
@@ -235,6 +236,74 @@ output: 6 5 4 3 2 1
 </div>
 <div class="section" id="cycle">
 <span id="cycle"></span><h2>cycle 循环<a class="headerlink" href="#cycle" title="永久链接至标题">¶</a></h2>
+<p>循环一组字符串，并按照传入的顺序输出，每次调用时，传入参数中的下一个字符串被输出，cycle必须用在for循环中。</p>
+</div>
+<div class="section" id="tablerow">
+<span id="tablerow"></span><h2>tablerow<a class="headerlink" href="#tablerow" title="永久链接至标题">¶</a></h2>
+<p>能生成一个HTML表格，必须用<code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code>和<code class="docutils literal notranslate"><span class="pre">&lt;/table&gt;</span></code>标签包裹起来</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span>&lt;table&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">tablerow</span><span class="w"> </span>product<span class="w"> </span>in<span class="w"> </span>collection.products<span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">product</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endtablerow</span><span class="w"> </span><span class="p">%}</span>
+&lt;/table&gt;
+</pre></div>
+</div>
+<p>输出如下</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row1&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col1&quot;</span><span class="p">&gt;</span>
+      Cool Shirt
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col2&quot;</span><span class="p">&gt;</span>
+      Alien Poster
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col3&quot;</span><span class="p">&gt;</span>
+      Batman Poster
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col4&quot;</span><span class="p">&gt;</span>
+      Bullseye Shirt
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col5&quot;</span><span class="p">&gt;</span>
+      Another Classic Vinyl
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col6&quot;</span><span class="p">&gt;</span>
+      Awesome Jeans
+    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>cols，定义表格列数</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">tablerow</span><span class="w"> </span>product<span class="w"> </span>in<span class="w"> </span>collection.products<span class="w"> </span><span class="na">cols</span><span class="o">:</span><span class="mi">2</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">product</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endtablerow</span><span class="w"> </span><span class="p">%}</span>
+</pre></div>
+</div>
+<p>offset，在指定index之后开始执行tablerow</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">tablerow</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">products</span> <span class="n">cols</span><span class="p">:</span><span class="mi">2</span> <span class="n">offset</span><span class="p">:</span><span class="mi">3</span> <span class="o">%</span><span class="p">}</span>
+  <span class="p">{{</span> <span class="n">product</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endtablerow</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>range，定义循环执行的范围，可以用数字和变量定义</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!--variable number example--&gt;
+
+{% assign num = 4 %}
+&lt;table&gt;
+{% tablerow i in (1..num) %}
+  {{ i }}
+{% endtablerow %}
+&lt;/table&gt;
+
+&lt;!--literal number example--&gt;
+
+&lt;table&gt;
+{% tablerow i in (3..5) %}
+  {{ i }}
+{% endtablerow %}
+&lt;/table&gt;
+</pre></div>
+</div>
 </div>
 </div>
 

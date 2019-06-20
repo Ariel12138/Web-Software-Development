@@ -101,6 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Jekyll_HelpCenter.html">基于 jekyll 开发帮助中心</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Liquid Tags 语法</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#">控制流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raw">raw 标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-tag">变量标记 Variable Tag</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Liquid_iteration.html">Liquid 循环迭代</a></li>
@@ -222,6 +224,49 @@
 <span class="p">{%</span><span class="w"> </span><span class="kr">endcase</span><span class="w"> </span><span class="p">%}</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="raw">
+<span id="raw"></span><h2>raw 标记<a class="headerlink" href="#raw" title="永久链接至标题">¶</a></h2>
+<p>临时禁止处理其中的代码，如果输出内容与liquid模版语言有冲突时，可以避免冲突。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">raw</span> <span class="o">%</span><span class="p">}</span>
+  <span class="n">In</span> <span class="n">Handlebars</span><span class="p">,</span> <span class="p">{{</span> <span class="n">this</span> <span class="p">}}</span> <span class="n">will</span> <span class="n">be</span> <span class="n">HTML</span><span class="o">-</span><span class="n">escaped</span><span class="p">,</span> <span class="n">but</span>
+  <span class="p">{{{</span> <span class="n">that</span> <span class="p">}}}</span> <span class="n">will</span> <span class="ow">not</span><span class="o">.</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endraw</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">Handlebars</span><span class="p">,</span> <span class="p">{{</span> <span class="n">this</span> <span class="p">}}</span> <span class="n">will</span> <span class="n">be</span> <span class="n">HTML</span><span class="o">-</span><span class="n">escaped</span><span class="p">,</span> <span class="n">but</span> <span class="p">{{{</span> <span class="n">that</span> <span class="p">}}}</span> <span class="n">will</span> <span class="ow">not</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variable-tag">
+<span id="variable-tag"></span><h2>变量标记 Variable Tag<a class="headerlink" href="#variable-tag" title="永久链接至标题">¶</a></h2>
+<p><strong>assign</strong> 能创建一个新变量</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">assign</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="n">false</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">my_variable</span> <span class="o">!=</span> <span class="n">true</span> <span class="o">%</span><span class="p">}</span>
+  <span class="n">This</span> <span class="n">statement</span> <span class="ow">is</span> <span class="n">valid</span><span class="o">.</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>capture</strong> 将capture开始与结束标记之间的字符串捕获之后赋值给一个变量，这样创建的变量都是字符串类型。</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">my_variable</span><span class="w"> </span><span class="p">%}</span>I am being captured.<span class="p">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{{</span><span class="w"> </span><span class="nv">my_variable</span><span class="w"> </span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>输出<code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">am</span> <span class="pre">being</span> <span class="pre">captured.</span></code></p>
+<p>capture 与 assign结合应用的例子：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">assign</span> <span class="n">favorite_food</span> <span class="o">=</span> <span class="s1">&#39;pizza&#39;</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">assign</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">35</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">capture</span> <span class="n">about_me</span> <span class="o">%</span><span class="p">}</span>
+<span class="n">I</span> <span class="n">am</span> <span class="p">{{</span> <span class="n">age</span> <span class="p">}}</span> <span class="ow">and</span> <span class="n">my</span> <span class="n">favorite</span> <span class="n">food</span> <span class="ow">is</span> <span class="p">{{</span> <span class="n">favorite_food</span> <span class="p">}}</span><span class="o">.</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endcapture</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{{</span> <span class="n">about_me</span> <span class="p">}}</span>
+</pre></div>
+</div>
+<p>输出<code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">am</span> <span class="pre">35</span> <span class="pre">and</span> <span class="pre">my</span> <span class="pre">favourite</span> <span class="pre">food</span> <span class="pre">is</span> <span class="pre">pizza.</span></code></p>
+<p><strong>increment</strong> 和 <strong>decrement</strong>
+使变量加一或减一</p>
 </div>
 </div>
 
